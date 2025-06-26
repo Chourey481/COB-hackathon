@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign2Speak - Testing Mode</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Testing Mode</h1>
+            <p>Test your sign language knowledge</p>
+        </header>
+
+        <main class="webcam-container">
+            <div class="target-section">
+                <h2>Show the sign for:</h2>
+                <div class="target-letter" id="targetLetter">?</div>
+            </div>
+
+            <div class="webcam-section">
+                <video id="webcam" autoplay playsinline></video>
+                <canvas id="canvas" style="display: none;"></canvas>
+                <div class="prediction-text">
+                    Predicted Letter: <span id="predictedLetter">-</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn-primary" id="clearBtn">Clear</button>
+                <button class="btn-primary" id="submitBtn">Submit</button>
+                <button class="btn-primary" id="nextBtn">Next Letter</button>
+            </div>
+
+            <div class="score-section">
+                <h3>Score</h3>
+                <p>Correct: <span id="correctCount">0</span></p>
+                <p>Attempts: <span id="totalAttempts">0</span></p>
+                <p>Accuracy: <span id="accuracy">0</span>%</p>
+            </div>
+        </main>
+
+        <footer>
+            <button class="btn-primary" onclick="window.location.href='index.html'">Back to Home</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

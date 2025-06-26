@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign2Speak - Learning Mode</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Learning Mode</h1>
+            <p>Learn sign language one letter at a time</p>
+        </header>
+
+        <main class="webcam-container">
+            <div class="target-section">
+                <h2>Current Letter:</h2>
+                <div class="target-letter" id="targetLetter">A</div>
+                <img id="signImage" src="../static/signs/A.jpg" alt="Sign for letter A" class="sign-image">
+            </div>
+
+            <div class="webcam-section">
+                <video id="webcam" autoplay playsinline></video>
+                <canvas id="canvas" style="display: none;"></canvas>
+                <div class="prediction-text">
+                    Predicted Letter: <span id="predictedLetter">-</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn-primary" id="clearBtn">Clear</button>
+                <button class="btn-primary" id="submitBtn">Submit</button>
+            </div>
+
+            <div class="progress-section">
+                <h3>Progress</h3>
+                <div id="progressBar"></div>
+                <p>Completed Letters: <span id="completedLetters">0</span>/26</p>
+            </div>
+        </main>
+
+        <footer>
+            <button class="btn-primary" onclick="window.location.href='index.html'">Back to Home</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
